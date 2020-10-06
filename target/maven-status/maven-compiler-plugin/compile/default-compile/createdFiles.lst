@@ -1,0 +1,5 @@
+com\demo\app\searchreplace\SearchreplaceApplication.class
+com\demo\app\searchreplace\api\Operation.class
+com\demo\app\searchreplace\model\File.class
+com\demo\app\searchreplace\impl\TextFileSearchReplace.class
+com\demo\app\searchreplace\controller\SearchReplaceController.class

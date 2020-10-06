@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+		<title>Search And Replace</title>
+	</head>
+	<body>
+		<div class="container">
+			<br>
+			<h3>Search and Replace Text</h3>
+			<hr>
+			<form action="#" th:action="@{/upload}" method="POST" enctype="multipart/form-data">
+				<br>
+				<br>
+				<label for="fname">Type of File</label>
+				<br> 
+				<input type="text" id="fileType" name="fileType"/>
+				<br> 
+				<br> 
+				<label for="lname">Word to Search</label>
+				<br> 
+				<input type="text" id="searchWord" name="searchWord"/>
+				<br> 
+				<br>
+				<input type="file" id="uploadFile" name="uploadFile"/> 
+				<br>
+				<br>
+				<button type="submit" class="btn btn-info col-2">Submit</button>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<div th:if="${resultFileName}">		
+					<a th:href="@{|/download/${resultFileName}}">Download</a>
+					<p>Click on Download for Processed result.</p>
+				</div>
+			</form>
+			
+		</div>
+	</body>
+</html>
+
+
+
