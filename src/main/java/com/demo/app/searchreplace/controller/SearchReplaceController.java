@@ -51,7 +51,8 @@ public class SearchReplaceController {
 		if (!StringUtils.isEmpty(downloadFileName)) {
 			File fileToDownload = new File(System.getProperty("user.dir") + "/" + downloadFileName);
 			String fileName = fileToDownload.getName();
-			response.setContentType("text/html;charset=UTF-8");
+			response.setContentType("text/html;charset=ISO_8859_1");
+			response.setStatus(200);
 			String headerValue = String.format("attachment; filename=\"%s\"", fileName);
 			response.setHeader("Content-Disposition", headerValue);
 			FileInputStream inputStream = new FileInputStream(fileToDownload.getAbsolutePath());
